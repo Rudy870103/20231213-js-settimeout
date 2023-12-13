@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>2023.12.13-js</title>
+    <style>
+        .container{
+            margin: auto;
+            text-align: center;
+        }
+        .box {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box bg-success" id="box"></div>
+        <button class="btn btn-danger" onclick="myFunction()" id="btn">red light</button>
+        <button class="btn btn-success" onclick="myFunction2()" id="btn">green light</button>
+
+    </div>
+
+
+
+
+    <script>
+        let box = document.getElementById('box');
+        let btn = document.getElementById('btn');
+
+        let timeout;
+
+        function myFunction() {
+            timeout = setTimeout(alertFunc, 3000);
+        }
+
+        function myFunction2() {
+            timeout = setTimeout(alertFunc2, 3000);
+        }
+
+        function alertFunc() {
+            box.setAttribute('class', "box bg-danger");
+        }
+        function alertFunc2() {
+            box.setAttribute('class', "box bg-success");
+        }
+
+    </script>
+
+
+</body>
+
+</html>
